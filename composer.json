@@ -1,0 +1,20 @@
+{
+    "require": {
+        "php": "^8.1",
+        "amphp/byte-stream": "^2.0",
+        "open-telemetry/api": "^1.0",
+        "open-telemetry/sdk": "^1.0",
+        "open-telemetry/exporter-otlp": "^1.0",
+        "spiral/roadrunner": "^2.12",
+        "tbachert/otel-async-revolt-adapter": "^0.1",
+        "tbachert/otel-async-sdk": "^0.1-dev",
+
+        "guzzlehttp/psr7": "^2.4"
+    },
+    "minimum-stability": "beta",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

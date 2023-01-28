@@ -1,0 +1,7 @@
+version: '2.7'
+server:
+    command: 'php src/worker.php'
+http:
+    address: '0.0.0.0:8080'
+    pool:
+        num_workers: 2

@@ -1,0 +1,18 @@
+version: '3.9'
+services:
+  php:
+    build: .
+    working_dir: /php
+    user: ${UID:-root}:${GID:-root}
+    command: [ ./rr, serve ]
+    environment:
+      - OTEL_PHP_FIBERS_ENABLED=1
+      - XDG_CACHE_HOME=/tmp/cache
+      - HOME=/tmp/home
+    volumes:
+      - .:/php
+    ports:
+      - '8080:8080'
+
+volumes:
+  db-data:
